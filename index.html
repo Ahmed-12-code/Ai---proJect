@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Teach</title>
+    
+  </head>
+  <body>
+    <div id="app">
+      <!-- start Nav -->
+      <nav class="navbar navbar-expand-lg Nav">
+        <div class="container">
+          <div class="logo py-3">
+            <img class="img-head" src="images/1.png" alt="Logo" />
+          </div>
+          <a class="navbar-brand header" href="#">Teach</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link active link" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link link active" href="#">Exam</a></li>
+              <li class="nav-item"><a class="nav-link link active" href="#">Results</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Nav -->
+
+      <!-- start Carousel -->
+      <div id="carouselExampleCaptions" class="carousel slide car container">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="car-img" src="images/7.jpg" class="d-block w-100" alt="AI-Photo">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Welcome to AI Course</h5>
+              <p>Explore the world of Artificial Intelligence and its applications.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Carousel -->
+
+      <!-- Start About AI -->
+      <section class="container my-5 scroll-reveal">
+        <h2 class="text-center">About the AI Course</h2>
+        <p class="text-center">This course provides an introduction to Artificial Intelligence, including key concepts such as Machine Learning, Neural Networks, and AI Ethics.</p>
+        <ul>
+          <li><strong>Instructor:</strong> Dr. Amany Sarhan</li>
+          <li><strong>Topics Covered:</strong> AI Basics, Machine Learning, Deep Learning, AI in Business</li>
+          <li><strong>Course Materials:</strong> Lecture notes, video tutorials, hands-on projects</li>
+        </ul>
+      </section>
+
+      <!-- End About AI-->
+
+      
+
+
+       <!-- AI History -->
+       <section class="container my-5 scroll-reveal">
+        <h2 class="text-center">AI Evolution Timeline</h2>
+        <div class="ai-timeline">
+          <div class="timeline-item">
+            <img src="images/8.jpg" class="ai-image" alt="AI History">
+            <div class="timeline-text"><strong>1950s:</strong> AI research begins.</div>
+          </div>
+          <div class="timeline-item">
+            <img src="images/9.jpg" class="ai-image" alt="Machine Learning">
+            <div class="timeline-text"><strong>1990s:</strong> Machine Learning emerges.</div>
+          </div>
+          <div class="timeline-item">
+            <img src="images/10.jpg" class="ai-image" alt="Deep Learning">
+            <div class="timeline-text"><strong>2010s:</strong> Deep Learning breakthroughs.</div>
+          </div>
+          <div class="timeline-item">
+            <img src="images/11.jpg" class="ai-image" alt="AI Today">
+            <div class="timeline-text"><strong>Present:</strong> AI in daily life.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- End AI History -->
+
+      <!-- AI Career Paths -->
+      <section class="container my-5 scroll-reveal">
+        <h2 class="text-center">AI Career Paths</h2>
+        <div class="ai-careers">
+          <div class="career-item">
+            <img src="images/12.jpg" class="ai-image" alt="Data Scientist">
+            <div class="career-text">Data Scientist</div>
+          </div>
+          <div class="career-item">
+            <img src="images/13.jpg" class="ai-image" alt="AI Engineer">
+            <div class="career-text">AI Engineer</div>
+          </div>
+          <div class="career-item">
+            <img src="images/14.jpg" class="ai-image" alt="ML Researcher">
+            <div class="career-text">Machine Learning Researcher</div>
+          </div>
+          <div class="career-item">
+            <img src="images/15.jpg" class="ai-image" alt="AI Product Manager">
+            <div class="career-text">AI Product Manager</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Start Quote -->
+      <section class="container my-5 text-center scroll-reveal">
+        <h2>AI Quote of the Day</h2>
+        <blockquote id="ai-quote" class="blockquote">“The science of today is the technology of tomorrow.” – Edward Teller</blockquote>
+      </section>
+
+      <!-- End Quote -->
+
+      <!-- Start Resources -->
+      <section class="container my-5 scroll-reveal">
+        <h2 class="text-center">Learning Resources</h2>
+        <ul>
+          <li><a href="chapter1-intro to AI.pdf">Introduction to AI - PDF</a></li>
+          <li><a href="chapter1-agents and environment types.pdf">Agents and Environment Types.pdf</a></li>
+          <li><a href="Sec1 _ Intro.pdf">Into-Sec</a></li>
+        </ul>
+      </section>
+      <!-- End Resources -->
+
+
+    
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/vue.global.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const sections = document.querySelectorAll(".scroll-reveal");
+        
+        function revealOnScroll() {
+          sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (sectionTop < windowHeight - 50) {
+              section.classList.add("visible");
+            }
+          });
+        }
+        
+        window.addEventListener("scroll", revealOnScroll);
+        revealOnScroll();
+      });
+    </script>
+  </body>
+</html>
